@@ -1,3 +1,6 @@
+//Lc- 34. Find First and Last Position of Element in Sorted Array
+
+
 public class Lc_34 {
     public static void main(String[] args) {
         int[] nums = new int[]{1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 5};
