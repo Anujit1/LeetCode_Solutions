@@ -19,23 +19,20 @@ public class InfinityArray {
 
 //    Search the location of target
     static int searchTarget(int target,  int[] arr){
-        int l = 0, h = 1;
-        int val = arr[0];
+        int start = 0;
+        int end = 0;
 
         // Find high to do binary search
-        while (val < target) {
+        while (arr[end] < target) {
 
-            // Store previous high
-            l = h;
+            int newStart = end + 1;
 
-            // Double high index
-            h = 2 * h;
+            end = end + (end - start +1)*2;
 
-            // Update new value
-            val = arr[h];
+            start = newStart;
         }
 
-        return binarySearch(arr, target, l, h);
+        return binarySearch(arr, target, start, end);
     }
 
 //    apply binary search on the found range
