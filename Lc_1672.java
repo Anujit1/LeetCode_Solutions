@@ -12,7 +12,6 @@ public class Lc_1672 {
         int[][] list = {
                 {1,2,3},
                 {3,2,1}
-
         };
 
         System.out.println(maximumWealth(list));;
