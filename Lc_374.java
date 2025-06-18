@@ -1,3 +1,4 @@
+//Lc-374. Guess Number Higher or Lower
 public class Lc_374 {
     public static void main(String[] args) {
         int n = 1000;
