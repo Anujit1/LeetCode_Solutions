@@ -6,7 +6,7 @@
 
 public class Lc_33 {
     public static void main(String[] args){
-        int[] arr = {3,4,5,6,7};
+        int[] arr = {3,4,5,6,7,1,2};
 
         int target = 3;
 
@@ -18,15 +18,17 @@ public class Lc_33 {
             return;
         }
 
-        //pivot on the first half
-        int res = binarySearch(0, pivot, target, arr);
-
-        //pivot on the second half
-        if(res == -1){
-            res = binarySearch(pivot+1, arr.length-1, target, arr);
+        if(arr[pivot] == target){
+            System.out.println(pivot);
+            return;
         }
 
-        System.out.println(res);
+        if(target >= arr[0]){
+            System.out.println(binarySearch(0, pivot-1, target, arr));
+            return;
+        }
+
+        System.out.println(binarySearch(pivot+1, arr.length-1, target, arr));
     }
 
     //find pivot
